@@ -1,0 +1,80 @@
+body {
+	Background-color:#574e4e;
+  display: block;
+  justify-content: center;
+  font-family:"Lucida Console", monospace;
+}
+
+/* Timeline Container */
+.timeline {
+  margin: 20px auto;
+  padding: 20px;
+}
+
+/* Outer Layer with the timeline border */
+.outer {
+  border-left: 2px solid #333;
+  max-width: 80%;
+  margin:auto;
+}
+
+/* Card container */
+.card {
+  position: relative;
+  margin: 0 0 20px 20px;
+  padding: 10px;
+  background: #BD3F3F;
+  box-shadow:2px 2px 2px black;
+}
+
+/* Information about the timeline */
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Title of the card */
+.title {
+  position: relative;
+  border-bottom: 2px solid #574e4e;
+}
+
+/* Timeline dot  */
+.title::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #B87A7A;
+  left: -39px;
+  border: 3px solid #BD3F3F;
+}
+.start{
+	position:relative;
+	width:20px;
+	height:20px;
+	Background-color:#BD3F3F;
+	left:-11px
+}
+p {
+	margin: 5px 5px 5px 5px;
+}
+a {
+	color: #BD3F3F;
+	Background-color: #E2C3A8;
+	padding: 5px 5px 5px 5px;
+	transition-duration: 0.1s;
+}
+a:hover {
+	box-shadow:5px 5px 3px black;
+}
+.downthere {
+	text-align: center;
+	color: #E2C3A8;
+}
+.flex {
+	max-width:80%;
+	text-align:center;
+	margin:auto;
+}

@@ -1,0 +1,359 @@
+ <!DOCTYPE html>
+<html>
+	<head>
+		<title>This is the 12vhpwr page</title>
+		<link rel="stylesheet" href="thecolors.css">
+	</head>
+
+	<body>
+	<div class="flex">
+		<h1>The complete timeline of the 12VHPWR connector</h1>
+		<h3>To make sure everyone is on the same page, lets make sure everyone understands the connector, and the specifications mentionning it. The 12VHPWR connector is part of the PCIe CEM 5.0 specification, designed by PCI-SIG. The ATX 3.0 specification is designed by Intel and gives guidelines to Power supply makers.</h3>
+		<h3>Intel did not create the 12VHPWR connector. Intel just "encapsulated" the PCIe CEM 5.0 spec into the ATX 3.0 spec. The goal of all this is to create a spec where the power supply (or PSU) can tell the graphics card (or any PCIe add-in card that is ATX 3.0 compliant) how strong it is. This allows the GPU or Add-in card to adjust their max power draw depending on the PSU to not overload it.</h3>
+		<h3>On paper, the idea is actually good. You would no longer get computer shutdowns from overloading, the GPU would just throttle itself instead. You get worse performance instead of... No performance at all (which is a win in my book).</h3>
+		<h3>The full ATX 3.0 specification is public on Intel's website. The PCIe CEM 5.0 is not.</h3>
+		<br>
+		<p>_The new 12VHPWR is a single connector rated at 55A total, 9.2A per 12v pin (<a href="https://edc.intel.com/content/www/us/en/design/ipla/software-development-platforms/client/platforms/alder-lake-desktop/atx-version-3-0-multi-rail-desktop-platform-power-supply-design-guide/2.0/pci-express-pcie-add-in-card-connectors-recommended/" target="_blank" rel="noopener noreferrer">source</a>).</p>
+		<p>_The PCIe CEM 5.0 specification now officializes power excursions (aka power spikes) and Add-in cards with a TDP over 300w (<a href="https://edc.intel.com/content/www/us/en/design/ipla/software-development-platforms/client/platforms/alder-lake-desktop/atx-version-3-0-multi-rail-desktop-platform-power-supply-design-guide/2.0/pcie-add-in-card-and-psu-power-budgets/" target="_blank" rel="noopener noreferrer">source</a>).</p>
+		<p>-The PCIe CEM 5.0 is for power. It is different from the usual PCIe specification most know for communication between CPU, GPU, motherboards, and other PCIe devices.
+	</div>
+		<div class="timeline">
+		  <div class="outer">
+			<div class="start"></div>
+			<div class="card">
+			  <div class="info">
+				<h3 class="title">15 June 2021 - The first drawing of the connector is made</h3>
+				<p>It comes from Amphenol and the full name is "Minitek Pwr CEM-5 12VHPWR Wire to Board Connectors".</p>
+				<p><a href="https://cdn.amphenol-cs.com/media/wysiwyg/files/documentation/gs-20-0704.pdf" target="_blank" rel="noopener noreferrer">Amphenol's documentation</a></p>
+			  </div>
+			</div>
+			<div class="card">
+			  <div class="info">
+				<h3 class="title">10 October 2021 - Igorslab makes the first press article on the 12VHPWR connector</h3>
+				<p>Igor notes the connector is part of the PCIe 5.0 CEM spec, made by PCI-SIG, and can deliver up to 600w. Some of the main spec listed in the article include 55A of continuous current at 12v and 9.2A per pin. Tomshardware would later make its own article quoting Amphenol to use 9.5A per pin instead.</p>
+				<p><a href="https://www.igorslab.de/en/up-to-600-watt-power-for-graphics-cards-with-the-new-pcie-5-0-adapter-nvidias-rtx-3090-ti-makes-the-start-exclusive/" target="_blank" rel="noopener noreferrer">Igorslab article</a>   <a href="https://www.tomshardware.com/news/pcie-5-power-connector-600w-next-gen-amd-nvidia-gpus" target="_blank" rel="noopener noreferrer">Tomshardware article</a></p>
+			  </div>
+			</div>
+			<div class="card">
+			  <div class="info">
+				<h3 class="title">27 January 2022 - Nvidia annouces the RTX 3090TI, first GPU to use the 12VHPWR connector</h3>
+				<p>The GPU launched at a ridiculous price of 2000$ and the Founders Edition was, unlike previous models, often in stock and easy to find. If you could afford it.</p>
+				<p><a href="https://www.techpowerup.com/gpu-specs/geforce-rtx-3090-ti.c3829" target="_blank" rel="noopener noreferrer">Techpowerup's database entry for the 3090TI</a></p>
+			  </div>
+			</div>
+			<div class="card">
+			  <div class="info">
+				<h3 class="title">1 February 2022 - Intel finalizes the ATX 3.0 specification</h3>
+				<p>This new spec brings many changes to power supplies. Most notably, PSUs now have to handle power spikes up to 200% of its capacity. Other minor changes were compiled for this spec as well as the arrival of a new PSU certification agency, Cybenetics. Contrary to popular beliefs, the 12VHPWR is *not* from Intel. The ATX 3.0 spec rather "encapsulates" the PCIe CEM 5.0 spec, which brings the 12VHPWR.</p>
+				<p><a href="https://edc.intel.com/content/www/us/en/design/ipla/software-development-platforms/client/platforms/alder-lake-desktop/atx-version-3-0-multi-rail-desktop-platform-power-supply-design-guide/2.0/" target="_blank" rel="noopener noreferrer">ATX 3.0 Official documentation</a>   <a href="https://www.tomshardware.com/news/intel-atx-v3-psu-standard" target="_blank" rel="noopener noreferrer">Tomshardware's article</a>   <a href="https://www.cybenetics.com/target=" target="_blank" rel="noopener noreferrer">Cybenetics website</a></p>
+			  </div>
+			</div>
+			<div class="card">
+			  <div class="info">
+				<h3 class="title">13 may 2022 - GIGABYTE releases first power supply with a 12vhpwr, not actually ATX 3.0 compliant</h3>
+				<p>GIGABYTE would be the first to rush a PSU with the connector out the door, the UG1000GM-PG5. Detailed reviews of this PSU revealed that while it did not blow up, it also failed to pass Intel's new requirements for ATX 3.0. The unit itself had a low bar as its predecessor, the PG-M, made the brand famous for the wrong reasons.</p>
+				<p><a href="https://www.techpowerup.com/review/gigabyte-ud1000gm-pg5-1000-w/" target="_blank" rel="noopener noreferrer">Techpowerup's review by Aris</a></p>
+			  </div>
+			</div>
+			<div class="card">
+				<div class="info">
+					<h3 class="title">10 August 2022 - MSI releases first actually ATX 3.0 power supply</h3>
+					<p>The MSI MEG Ai1300P PCIE5 would win the race of the first PSU to pass Intel's new specification requirements. Unfortunately, there were no reviews at launch to actually test that part. This would be the start of many new PSU releases as most brands would start adapting their units this new spec.</p>
+					<p><a href="https://www.anandtech.com/show/18679/the-msi-meg-ai1300p-pcie5-1300w-psu-review/2" target="_blank" rel="noopener noreferrer">Anandtech's review</a>   <a href="https://www.tomshardware.com/reviews/msi-meg-ai1000p-pcie-5-atx-v30-power-supply-review" target="_blank" rel="noopener noreferrer">Tomshardware's review of the MSI AI-1000P PCIE5</a></p>
+				</div>
+			</div>
+			<div class="card">
+				<div class="info">
+					<h3 class="title">10 September 2022 - PCI-SIG warns of "safety issues under certain conditions"</h3>
+					<p>WCCFTECH somehow got their hands on an email warning of "inadequate loads". This statement spread like wildfire and many misunderstood the main point of the email and article. The actual point was that the terminals inside the connector could not maintain full contact under hard bending near the connector.</p>
+					<p><a href="https://wccftech.com/atx-3-0-12vhpwr-gen-5-connector-major-safety-risk-using-adapter-confirms-pci-sig/" target="_blank" rel="noopener noreferrer">WCCFTECH's original article</a>   <a href="https://cultists.network/8815/melting-12vhpwr-connectors/" target="_blank" rel="noopener noreferrer">Cultists.network's article</a></p>
+				</div>
+			</div>
+			<div class="card">
+				<div class="info">
+					<h3 class="title">20 September 2022 - Nvidia Announces the RTX 4090</h3>
+					<p>This would be the second GPU to feature the 12VHPWR connector after the 3090TI and would come with a 4x8pin to 12VHPWR adapter in the box. The 4090 would be acclaimed as a greatly powerful GPU despite its high price and would hit the shelves on October 12. Still, it would prove not so easy to find and often out of stock.</p>
+					<p><a href="https://www.techpowerup.com/gpu-specs/geforce-rtx-4090.c3889" target="_blank" rel="noopener noreferrer">Techpowerup's database entry for the 4090</a></p>
+				</div>
+			</div>
+			<div class="card">
+				<div class="info">
+					<h3 class="title">21 September 2022 - Nvidia fixes power spikes on the RTX 4090</h3>
+					<p>A press releases details much of the card's features, among which the default power limit of 450w is mentionned, with the ability to bump it to 600w (the max wattage of the 12VHPWR). Another important detail is Nvidia's comments on a new VRM design with much, much fewer power spikes as the previous generation saw. In practice, this would make the 4090 very easy to power compared to a 3090 if not even a 3080TI.</p>
+					<p><a href="https://www.techpowerup.com/299096/nvidia-details-geforce-rtx-4090-founders-edition-cooler-pcb-design-new-power-spike-management" target="_blank" rel="noopener noreferrer">Techpowerup's article</a></p>
+				</div>
+			</div>
+			<div class="card">
+				<div class="info">
+					<h3 class="title">17 October 2022 - Cablemod annouces first right-angled 12VHPWR adapter</h3>
+					<p>With a new connector comes new accessories to it. Cablemod is the first to put out a right-angled connector in an attempt to avoid having to bend the cable as the new GPUs end up quite large. A few days later, Cablemod would post an article on their website to guide people in "how to correctly plug a 12VHPWR cable". One could say this is "foreshadowing".</p>
+					<p><a href="https://www.tomshardware.com/news/rtx-4090-right-angle-adapter" target="_blank" rel="noopener noreferrer">Tomshardware's article</a>   <a href="https://videocardz.com/newz/cablemod-unveils-90-degree-angle-12vhpwr-power-adapter-for-geforce-rtx-40-gpus" target="_blank" rel="noopener noreferrer">Videocardz's article</a>   <a href="https://cablemod.com/12vhpwr/" target="_blank" rel="noopener noreferrer">Cablemod's guide</a></p>
+				</div>
+			</div>
+			<div class="card">
+				<div class="info">
+					<h3 class="title">24 October 2022 - First report of a melted 12VHPWR</h3>
+					<p>Here it is. The first report of a melted 12VHPWR adapter cable. At the time, nobody really knew how or why this happened. The doubt was still in the air. It would not be for long.</p>
+					<p><a href="https://www.tomshardware.com/news/rtx-4090-first-melted-adapter-cable" target="_blank" rel="noopener noreferrer">Tomshardware's article</a></p>
+				</div>
+			</div>
+			<div class="card">
+				<div class="info">
+					<h3 class="title">25 October 2022 - RDNA3 will not use the 12VHPWR</h3>
+					<p>Quoting a tweet from a manager of Radeon group. The GPU would use traditional 8pin connectors instead.</p>
+					<p><a href="https://videocardz.com/newz/amd-radeon-rx-7000-cards-reportedly-not-using-pcie-gen5-12vhpwr-connector" target="_blank" rel="noopener noreferrer">Videocardz's article</a></p>
+				</div>
+			</div>
+			<div class="card">
+				<div class="info">
+					<h3 class="title">27 October 2022 - Igorslab dissects the 12VHPWR adapter</h3>
+					<p>Igor calls it a "horror" upon seeing how its made and says the "build quality is extremely poor". Still, its conclusions are that the connector itself is not the main issue, but rather the adapter from Nvidia. It is worth noting that while the melted cables and connectors hdave to be replaced, no component ultimately broke or died as a result. One can still desolder and replace the connector of the GPU and have it work again.</p>
+					<p><a href="https://www.igorslab.de/en/adapter-of-the-gray-analyzed-nvidias-brand-hot-12vhpwr-adapter-with-built-in-breakpoint/" target="_blank" rel="noopener noreferrer">Igorslab's article</a></p>
+				</div>
+			</div>
+			<div class="card">
+				<div class="info">
+					<h3 class="title">28 October 2022 - Attempted fix by 3D prints</h3>
+					<p>Amidst all the chaos and concerns around the new adapter, users are not using 3D printed parts in an attempt to straighten the cables and avoid bending. All in hopes of the adapter not catching fire.</p>
+					<p><a href="https://www.tomshardware.com/news/3d-print-rtx-4090-power-connector-fix" target="_blank" rel="noopener noreferrer">Tomshardware's article</a></p>
+				</div>
+			</div>
+			<div class="card">
+				<div class="info">
+					<h3 class="title">30 October 2022 - GamersNexus tests the Nvidia adapter</h3>
+					<p>No real conclusions for now. A theory of a badly socketed cable is mentionned, but not yet confirmed. GN says more tests to come.</p>
+					<p><a href="https://youtu.be/EIKjZ1djp8c" target="_blank" rel="noopener noreferrer">GamersNexus' Video</a></p>
+				</div>
+			</div>
+			<div class="card">
+				<div class="info">
+					<h3 class="title">1 November 2022 - Galax annouces 4090 HOF with 2 12VHPWR</h3>
+					<p>As usual for HOF cards, overkill is the keyword. And what is more overkill than one 12VHPWR ? A second one of course. Oh, and a 1000w Vbios because why not.</p>
+					<p><a href="https://www.tomshardware.com/news/galax-rtx-4090-hof-dual-16-pin-connectors-1000w" target="_blank" rel="noopener noreferrer">Tomshardware's article</a></p>
+				</div>
+			</div>
+			<div class="card">
+				<div class="info">
+					<h3 class="title">1 November 2022 - Teclab tests the Nvidia adapter</h3>
+					<p>Teclab's testing shows the adapter is fine, and even stronger than expected in some area. However, the theory of badly connected cables comes up again and is cited as a source of problem as it increases resistance and creates more heat - leading to melting. The theory of a manufacturing defect is also mentionned but as Teclab notes, the connector had no issues with the 3090TI and they were able to push up to 1400w through the adapter to a GPU without the adapter melting.</p>
+					<p><a href="https://youtu.be/hkN81jRaupA" target="_blank" rel="noopener noreferrer">Teclab's video</a></p>
+				</div>
+			</div>
+			<div class="card">
+				<div class="info">
+					<h3 class="title">5 November 2022 -  First native cable melting</h3>
+					<p>They thought only adapters would melt. They thought wrong. There is no escape.</p>
+					<p><a href="https://www.tomshardware.com/news/rtx-4090-native-16-pin-melting" target="_blank" rel="noopener noreferrer">Tomshardware's article</a></p>
+				</div>
+			</div>
+			<div class="card">
+				<div class="info">
+					<h3 class="title">8 November 2022 - Jonnyguru says cablers arent properly inserted</h3>
+					<p>Jonnyguru, aka Corsair's PSU expert, calls on user to properly insert their cables to avoid melting. His testing shows the adapter did not bulge despite being damaged by hand. Jon also calls the adapter "VERY DIFFICULT to insert completely".</p>
+					<p><a href="https://www.tomshardware.com/news/corsairs-psu-expert-jonny-guru-weighs-in-on-nvidia-connector-gate" target="_blank" rel="noopener noreferrer">Tomshardware's article</a></p>
+				</div>
+			</div>
+			<div class="card">
+				<div class="info">
+					<h3 class="title">9 November 2022 - Intel adopts te 12VHPWR for its datacenter GPUs</h3>
+					<p>Nvidia is no longer the only one to use this new, arguably problematic connector.</p>
+					<p><a href="https://videocardz.com/newz/intel-adopts-12vhpwr-connector-for-its-data-center-gpu-max-1100-pcie-series" target="_blank" rel="noopener noreferrer">Videocardz's article</a></p>
+				</div>
+			</div>
+			<div class="card">
+				<div class="info">
+					<h3 class="title">14 November 2022 - Nvidia confirms 2 manufacturers of its adapter</h3>
+					<p>Astron and NTK both manfacture the adapter Nvidia ships with its GPUs. Igor also notes he "prefers" NTK's adapters to Astron's. He also pushes the blame on the PCI-SIG for poor testing of the connection used.</p>
+					<p><a href="https://www.igorslab.de/en/good-or-bad-adapter-different-12vhpwr-adapter-for-nvidias-geforce-rtx-4090-and-where-you-can-see-backgrounds-investigative/3/" target="_blank" rel="noopener noreferrer">Igorslab's article</a></p>
+				</div>
+			</div>
+			<div class="card">
+				<div class="info">
+					<h3 class="title">16 November 2022 - GamersNexus calls on improperly connected cables</h3>
+					<p>GN pushes the theory very far and actually shows the connector overheating when badly inserted, and even melting. The conclusions this time, are that the melting happens with connectors really far unseated, and at an angle. Both adapters and native cables are prone to failure. GN also notes all pictures of melting show marks of poor socketing. Ultimately, the cause of "user error" is pushed to the front.</p>
+					<p><a href="https://youtu.be/ig2px7ofKhQ" target="_blank" rel="noopener noreferrer">GamersNexus's video</a></p>
+				</div>
+			</div>
+			<div class="card">
+				<div class="info">
+					<h3 class="title">17 November 2022 - AMD throws jab at Nvidia over melted connectors</h3>
+					<p>A tweet from an AMD employee shows a picture of dual 8pins connectors on the soon-to-release RDNA3 gpus with the caption "stay safe this holiday season". The annoucement show of those new cards would also see passive-aggressive remarks about "not needing a new power connector". RDNA3 would ultimately launch with a mixed to negative feedback from third party media due to being barely competitive.</p>
+					<p><a href="https://www.tomshardware.com/news/amd-exec-burns-nvidia-over-melting-connectors" target="_blank" rel="noopener noreferrer">Tomshardware's article</a></p>
+				</div>
+			</div>
+			<div class="card">
+				<div class="info">
+					<h3 class="title">18 November 2022 - "only 50 melting case so far"</h3>
+					<p>Nvidia mentions investigating the reports and says it is only aware of "about 50 case globally". Nvidia also mentions that a common issue is the connector badly inserted. One could say Nvidia is blaming user error, while many users are unhappy and blame the connector for not being user-proof enough.</p>
+					<p><a href="https://www.tomshardware.com/news/nvidia-issues-statement-on-melting-12vhpwr-power-adapters" target="_blank" rel="noopener noreferrer">Tomshardware's article</a>   <a href="https://videocardz.com/newz/nvidia-releases-official-statement-on-melting-power-cables-only-50-cases-known-globally" target="_blank" rel="noopener noreferrer">Videocardz's article</a></p>
+				</div>
+			</div>
+			<div class="card">
+				<div class="info">
+					<h3 class="title">1 December 2022 - PCI-SIG tells everyone to follow the spec after lawsuit filed</h3>
+					<p>The PCI-SIG basically reminds its partners that it does not make specifications for birds, but instead for the very partners receiving the email. The PCI-SIG calls for all members manufacturing or selling their technology to "take all appropriate and prudent measures to ensure end user safety, including testing for the reported problem cases involving consumers as alleged in the above-referenced lawsuit". A  4090 user filed a lawsuit against Nvidia after its adapter melted.</p>
+					<p><a href="https://videocardz.com/newz/pci-sig-tells-its-members-to-adhere-to-official-12vhpwr-specifications-when-making-power-cables" target="_blank" rel="noopener noreferrer">Videocardz's article</a>   <a href="https://www.tomshardware.com/news/nvidia-16-pin-gpu-power-connector-all-we-know" target="_blank" rel="noopener noreferrer">Tomshardware's article</a>   <a href="https://www.pcmag.com/news/nvidia-faces-class-action-lawsuit-over-melting-12vhpwr-cables" target="_blank" rel="noopener noreferrer">PCmag's article</a></p>
+				</div>
+			</div>
+			<div class="card">
+				<div class="info">
+					<h3 class="title">18 January 2023 - First Cablemod adapter to melt</h3>
+					<p>Despite all attempts from Cablemod, the curse of melted plastic would catch up to them too. As with all previous meltings, the gpu survived. But it seems nothing could stop the 12vhpwr from melting in the end.</p>
+					<p><a href="https://wccftech.com/cablemods-custom-12vhpwr-cable-for-geforce-rtx-40-cards-burns-up-company-rep-responds-immediately/" target="_blank" rel="noopener noreferrer">WCCFTECH's article</a></p>
+				</div>
+			</div>
+			<div class="card">
+				<div class="info">
+					<h3 class="title">6 April 2023 - Lian brings RGB to the 12VHPWR</h3>
+					<p>Lian Li decided that the best thing to add to a connector infamous for fire damage would be RGB. A lot of RGB. The company says the cable has a custom design on the GPU end, with "improvements to its original design to provide a stronger connection to the GPU, and uses materials to ensure the connector’s durability".</p>
+					<p><a href="https://www.tomshardware.com/news/lian-li-brings-rgb-to-16-pin-12vhpwr-with-strimer-plus-v2" target="_blank" rel="noopener noreferrer">Tomshardware's article</a></p>
+				</div>
+			</div>
+			<div class="card">
+				<div class="info">
+					<h3 class="title">19 May 2023 - MSI shows colored 12VHPWR pins hoping it would help users notice wrongly socketed cables</h3>
+					<p>The company also boasts about using the fresh revision of the 12VHPWR, the 12v 2x6, which supposedly fixes many issues. Aris at HWbusters would later review this psu and note his sample still has the old 12VHPWR connector on the psu.</p>
+					<p><a href="https://videocardz.com/newz/msi-has-a-simple-solution-for-12vhpwr-cable-problems" target="_blank" rel="noopener noreferrer">Videocardz's article</a>   <a href="https://hwbusters.com/psus/msi-mag-a850gl-pcie5-850w-psu-review/" target="_blank" rel="noopener noreferrer">HWbusters' review</a></p>
+				</div>
+			</div>
+			<div class="card">
+				<div class="info">
+					<h3 class="title">23 May 2023 - 12VHPWR are still burning</h3>
+					<p>The fear of burnt connectors does not go away.</p>
+					<p><a href="https://www.tomshardware.com/news/16-pin-connectors-are-still-melting-on-rtx-4090-gpus" target="_blank" rel="noopener noreferrer">Tomshardware's article</a></p>
+				</div>
+			</div>
+			<div class="card">
+				<div class="info">
+					<h3 class="title">16 June 2023 - First 12VHPWR melted on the PSU side</h3>
+					<p>While arguably less expensive to replace a power supply than an RTX 4090, it is the first report of a burn on the PSU side.</p>
+					<p><a href="https://www.tomshardware.com/news/16-pin-connectors-are-still-melting-on-rtx-4090-gpus" target="_blank" rel="noopener noreferrer">Tomshardware's article</a></p>
+				</div>
+			</div>
+			<div class="card">
+				<div class="info">
+					<h3 class="title">5 July 2023 - RTX 4070 ships with updated 12v 2x6</h3>
+					<p>The new connector revision is highly requested as users ask for anything to stop the melting. Anything. This revised connector is not entirely official yet.</p>
+					<p><a href="https://www.tomshardware.com/news/nvidia-seemingly-uses-revamped-power-connector-for-rtx-4070-fe" target="_blank" rel="noopener noreferrer">Tomshardware's article</a></p>
+				</div>
+			</div>
+			<div class="card">
+				<div class="info">
+					<h3 class="title">6 July 2023 - Asus decides to use the 12VHPWR on Ampere cards</h3>
+					<p>Why ?</p>
+					<p><a href="https://wccftech.com/asus-geforce-rtx-3060-ti-atlas-shark-gpus-come-with-16-pin-12vhpwr-connector/" target="_blank" rel="noopener noreferrer">WCCFTECH's article</a></p>
+				</div>
+			</div>
+			<div class="card">
+				<div class="info">
+					<h3 class="title">7 July 2023 - Users come with custom programs to try and detect overheating</h3>
+					<p>Still anything to prevent the melting. Creative minds are set free.</p>
+					<p><a href="https://www.tomshardware.com/news/12vhpwr-safety-mechanism-rtx-4090" target="_blank" rel="noopener noreferrer">Tomshardware's article</a></p>
+				</div>
+			</div>
+			<div class="card">
+				<div class="info">
+					<h3 class="title">5 September 2023 - MSI rejects RMA request due to Cablemod adapter</h3>
+					<p>Despite all its claims of durability and quality, Cablemod takes a blow after MSI blames its adapter for melted connectors on an MSI GPU. The user is told of a manufacturing issue on Cablemod's adapter as well as "their third-party adapter has caused an issue and voided the warranty on your graphics card".</p>
+					<p><a href="https://www.tomshardware.com/news/msi-reportedly-denies-gpu-rma-due-to-cablemod-16-pin-adapter" target="_blank" rel="noopener noreferrer">Tomshardware's article</a>   <a href="https://videocardz.com/newz/msi-rejects-graphics-card-rma-claim-due-to-use-of-a-cablemod-12vhpwr-adapter" target="_blank" rel="noopener noreferrer">Videocardz's article</a></p>
+				</div>
+			</div>
+			<div class="card">
+				<div class="info">
+					<h3 class="title">5 September 2023 - Asus embraces proprietary connectors</h3>
+					<p>Asus showed a concept GPU fitted with a special connector of Asus' design that connects directly in the motherboard, similar to the PCIe connector, but smaller.</p>
+					<p><a href="https://videocardz.com/newz/first-geforce-rtx-40-graphics-card-without-8-pin-or-12vhpwr-connector-launches-in-china" target="_blank" rel="noopener noreferrer">Videocardz's article</a></p>
+				</div>
+			</div>
+			<div class="card">
+				<div class="info">
+					<h3 class="title">13 September 2023 - ATX 3.1 and PCIe CEM 5.1 are now official</h3>
+					<p>The new 12v 2x6 is now an official connector replacing the troubled 12VHPWR in hopes less fires happen. The connector itself was in production much before the release of the spec, and is likely on a lot of devices when this spec releases.</p>
+					<p><a href="https://edc.intel.com/content/www/us/en/design/ipla/software-development-platforms/client/platforms/alder-lake-desktop/atx-version-3-0-multi-rail-desktop-platform-power-supply-design-guide/2.1a/" target="_blank" rel="noopener noreferrer">ATX 3.1 Official documentation</a>   <a href="https://hwbusters.com/psus/atx-v3-1-pcie-cem-5-1-are-official/" target="_blank" rel="noopener noreferrer">HWbusters' article</a></p>
+				</div>
+			</div>
+			<div class="card">
+				<div class="info">
+					<h3 class="title">25 September 2023 - The new 12v 2x6 seems like it does not melt anymore.</h3>
+					<p>With longer power pins, and short sense pins, as well as a new condition to cut to 0 watts if no sense pins are detected, this new connector seems to be much safer as the previous one. Only time will tell.</p>
+					<p><a href="https://www.tomshardware.com/news/12v-2x6-connector-tested" target="_blank" rel="noopener noreferrer">Tomshardware's article</a>   <a href="https://youtu.be/aI-soO7_l_M" target="_blank" rel="noopener noreferrer">HWbusters' video</a></p>
+				</div>
+			</div>
+			<div class="card">
+				<div class="info">
+					<h3 class="title">2 October 2023 - Cablemod refreshsed right-angled adapter</h3>
+					<p>The company reveals the V1.1 of the adapter using the new 12v 2x6 of course, after the previous one ended up, like most adapters, prone to failure. </p>
+					<p><a href="" target="_blank" rel="noopener noreferrer"></a></p>
+				</div>
+			</div>
+			<div class="card">
+				<div class="info">
+					<h3 class="title">11 October 2023 - Adapter found melted after a year of use</h3>
+					<p>No piece in sight as yet another example of corner case shows up.</p>
+					<p><a href="https://www.tomshardware.com/news/rtx-4090-16-pin-connector-melted-after-one-year-of-usage" target="_blank" rel="noopener noreferrer">Tomshardware's article</a></p>
+				</div>
+			</div>
+			<div class="card">
+				<div class="info">
+					<h3 class="title">11 November 2023 - Up to 100 melted connectors repaired a month</h3>
+					<p>NorthridgeFix says they still receive quite a large amount of burnt 4090 for repair, up to 25 per week. The repair technician blames the connector design for all these issues and even says he got himself a Hiroshima mask to avoid unhealthy fumes.</p>
+					<p><a href="https://youtu.be/nplGX4SqABw?si=cE6A-H-Z7UC4Ylwg" target="_blank" rel="noopener noreferrer">NorthridgeFix's video</a>   <a href="https://www.tomshardware.com/news/technician-repairs-hundreds-rtx-4090-melted-connectors-every-month" target="_blank" rel="noopener noreferrer">Tomshardware's article</a></p>
+				</div>
+			</div>
+			<div class="card">
+				<div class="info">
+					<h3 class="title">22 December 2023 - Cablemod recalls right-angled adapters</h3>
+					<p>Despite all its efforts, Cablemod could not win against the curse of melted plastic. The brand cancels and recalls all right-angled adapters, urges users to stop using them and remove them from their computers.</p>
+					<p><a href="https://cablemod.com/adapterrecall/" target="_blank" rel="noopener noreferrer">Cablemod's official statement</a>   <a href="https://videocardz.com/newz/cablemod-recalls-12vhpwr-1-0-1-1-angled-adapters-users-advised-to-stop-using-them-immediately" target="_blank" rel="noopener noreferrer">Videocardz's article</a></p>
+				</div>
+			</div>
+			<div class="card">
+				<div class="info">
+					<h3 class="title">23 December 2023 - Seasonic suggests a hair dryer</h3>
+					<p>Seasonic advises users to warm up cables before bending, with a heat source such as a "hair dryer". This advice sparked curiosity yet nobody really seems to know if this advice is actually good or bad, and people feel more shocked that it would come from the manufacturer itself. This advice was removed a few days later.</p>
+					<p><a href="https://elchapuzasinformatico.com/2023/12/seasonic-secador-de-pelo-cableado-12vhpwr/" target="_blank" rel="noopener noreferrer">Elchapuzasinformatico's article</a>   <a href="https://www.tomshardware.com/pc-components/gpus/power-supply-maker-yanks-hairdryer-advice-for-melting-prone-16-pin-gpu-connectors" target="_blank" rel="noopener noreferrer">Tomshardware's article</a>   <a href="https://videocardz.com/newz/seasonic-recommends-using-a-hair-dryer-to-bend-12vhpwr-12v-2x6-power-cables-for-geforce-rtx-40-gpus" target="_blank" rel="noopener noreferrer">Videocardz's article</a></p>
+				</div>
+			</div>
+			<div class="card">
+				<div class="info">
+					<h3 class="title">26 December 2023 - Seasonic invites user to test their new cable</h3>
+					<p>Seasonic unveils their new right-angled 12v 2x6 cable and invites users to test it, for those that would be ready to serve as beta testers for power cables so controversial.</p>
+					<p><a href="https://videocardz.com/newz/seasonic-reveals-its-new-12v-2x6-angled-power-invites-rtx-40-owners-to-test-it" target="_blank" rel="noopener noreferrer">Videocardz's article</a></p>
+				</div>
+			</div>
+			<div class="card">
+				<div class="info">
+					<h3 class="title">1 January 2024 - Der8auer slams the 12VHPWR into the ground</h3>
+					<p>The german youtuber and hardware enthusiast speaks his mind about the issues he encounters with the connector since its first use on the RTX 4090. Roman blames the lack of overhead and safety margin on the connector, and lack of redundancy because of a single connector. He calls it a "garbage solution" and calls for Nvidia to start using 2 of those for very high power GPUs like the 4090.</p>
+					<p><a href="https://youtu.be/p0fW5SLFphU" target="_blank" rel="noopener noreferrer">Der8auer's video</a></p>
+				</div>
+			</div>
+			<div class="card">
+				<div class="info">
+					<h3 class="title">8 January 2024 - Nvidia launches Ada refresh</h3>
+					<p>Nvidia unveiled at CES 2024 its latest products, the RTX 4070 SUPER, RTX 4070 TI SUPER, and RTX 4080 SUPER. All feature a 16pin connector, most likely a 12v 2x6 at this point. Almost nothing is said on those connectors. Partners seem to also all feature the same connector.</p>
+					<p><a href="https://www.nvidia.com/en-us/geforce/news/geforce-rtx-4080-4070-ti-4070-super-gpu/" target="_blank" rel="noopener noreferrer">Nvidia's article</a>    <a href="https://www.techpowerup.com/gpu-specs/geforce-rtx-4070-super.c4186" target="_blank" rel="noopener noreferrer">Techpowerup's RTX 4070 SUPER specification page</a>    <a href="https://videocardz.com/newz/zotac-geforce-rtx-4070-super-cards-pictured-all-with-12vhpwr-connector-on-board" target="_blank" rel="noopener noreferrer">videocardz's article on Zotac models</a></p>
+				</div>
+			</div>
+			<div class="card">
+				<div class="info">
+					<h3 class="title">9 January 2024 - Asus launches BTF design</h3>
+					<p>Asus commits even more to cable free designs and expends its GPUs offering with its new BTF 600w connector, moving the 12VHPWR or 12v 2x6 from the GPU to the back of the motherboard. This is the final products from the concept introduced on september 9th by Asus.</p>
+					<p><a href="https://www.asus.com/content/btf-hidden-connector-design/" target="_blank" rel="noopener noreferrer">Asus's article</a>    <a href="https://edgeup.asus.com/2024/introducing-btf-an-easy-clean-approach-to-pc-building-that-keeps-the-cables-out-of-sight/" target="_blank" rel="noopener noreferrer">Asus's EdgeUp article</a></p>
+				</div>
+			</div>
+			
+			<!--need to get back to html coding
+			<div class="card">
+				<div class="info">
+					<h3 class="title">Title</h3>
+					<p></p>
+					<p><a href="" target="_blank" rel="noopener noreferrer"></a></p>
+				</div>
+			</div>
+			-->
+		  </div>
+		</div>
+		<div class="downthere"><p>copyright PowerBore 2023</p></div>
+	</body>
+</html> 
